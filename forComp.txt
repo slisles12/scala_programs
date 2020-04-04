@@ -1,0 +1,5 @@
+def findMatching(a: String, b: List[String]): List[String] = {
+    for(word <- b
+    if (word.contains(a))
+    ) yield word
+}

@@ -1,0 +1,1 @@
+def f(x:String) = {x.split(" ").groupBy(identity).view.mapValues(_.size).toMap}
