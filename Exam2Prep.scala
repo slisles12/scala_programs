@@ -13,6 +13,17 @@ object Exam2Prep {
     (for ((x) <- (List(-5, 0, 3)))
       yield if(x <= 0) 0 else 1).toList
 
+
+    //problem nine
+    val f = isAnagram("computer science");
+
+    println(f("science computer"))
+
+    //problem ten
+    val xs = List("science computer", "lol", "scicomp enceuter")
+    val anagrams = (for(x <- xs if (f(x))) yield x).toList
+    println(anagrams)
+
   }
 
   //problem two
@@ -46,12 +57,15 @@ object Exam2Prep {
 
   //problem four
   def pickLonger(xs: Iterable[String], xy: Iterable[String]): Iterable[String] = {
-       for ((x, y) <- (xs zip xy))
-            yield if(x.size > y.size) x else y
+    for ((x, y) <- (xs zip xy))
+      yield if(x.size > y.size) x else y
   }
 
   //problem five
   def pickLongest(xs: List[Iterable[String]]): Iterable[String] = {
+    xs.foldLeft(xs.head) {
+        (curr, next) => pickLonger(curr, next)
+    }
   }
 
   //problem six
@@ -60,8 +74,11 @@ object Exam2Prep {
   }
 
   //problem eight
+  def isAnagram(s: String) = {
+    (t: String) => t.toSeq.sorted.unwrap.toLowerCase() == s.toSeq.sorted.unwrap.toLowerCase()
+  }
 
-
+  defaddCurried(x: Double) = { (y: Int) => x + y }
   //problem eleven
   def countXOR[A](list: List[A], firstPred: A => Boolean, secondPred: A => Boolean): Int = {
 
@@ -103,7 +120,7 @@ object Exam2Prep {
 
   class Node(neighbors: Iterable[Node]){
 
-    
+
 
   }
 
