@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\LisleES17\OneDrive - Grove City College\Programming Languages\TestingScala\Project3_Minimal_Starter\MainNoActors.scala:4:21: not found: type IndexedPages[0m
+[0m[[0m[31merror[0m] [0m[0m    val index = new IndexedPages()[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\LisleES17\OneDrive - Grove City College\Programming Languages\TestingScala\Project3_Minimal_Starter\MainNoActors.scala:20:28: not found: type IndexedPages[0m
+[0m[[0m[31merror[0m] [0m[0m  def addTop50Pages(index: IndexedPages) = {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\LisleES17\OneDrive - Grove City College\Programming Languages\TestingScala\Project3_Minimal_Starter\MainNoActors.scala:10:64: not found: type Query[0m
+[0m[[0m[31merror[0m] [0m[0m                          Vector("watch", "movies") ).map{ new Query(_) }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\LisleES17\OneDrive - Grove City College\Programming Languages\TestingScala\Project3_Minimal_Starter\SearchResults.scala:2:32: not found: type Query[0m
+[0m[[0m[31merror[0m] [0m[0mclass SearchResults(val query: Query, val numIndexedPages:Int, val urls: Seq[String], val scores: Seq[Double]) {[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

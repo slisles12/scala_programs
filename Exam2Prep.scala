@@ -5,7 +5,7 @@ object Exam2Prep {
   def main(args: Array[String]): Unit = {
 
     //problem one
-    List(1, 2, 3) map { (_:Int)/2.0 }
+    List(1, 2, 3) map { (_)/2.0 }
 
     //problem seven
     List(-5, 0, 3).map { x: Int => if(x <= 0) 0 else 1 }
@@ -116,11 +116,28 @@ object Exam2Prep {
     return list(0) * prod(list.slice(1,list.size))
   }
 
+import scala.annotation.tailrec
+def sumAbs(items: List[Int]): Int = {
+    @tailrec // tells compiler to try to optimize the helper
+     def helper (items: List[Int], sumSoFar: Int): Int = {
+        items match {
+            case Nil => sumSoFar
+            case h::tail => helper(tail, sumSoFar + sumAbs(tail))
+        }
+    } 
+    helper(items, 0)
+}
+
+
   //problem fourteen
 
   class Node(neighbors: Iterable[Node]){
 
+  }
 
+  def fullTree(depth: Int, numChildren: Int): Node = {
+
+    
 
   }
 
